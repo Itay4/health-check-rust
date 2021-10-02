@@ -6,6 +6,7 @@ services:
     restart: always
     volumes:
       - my-service-volume:/var/lib/postgresql/data/
+      - ./db:/docker-entrypoint-initdb.d/
     networks:
       - my-service-network 
     ports:

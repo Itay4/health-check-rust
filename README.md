@@ -9,9 +9,20 @@
 
 ## Usage
 
+To install rust stable, run the following command:
+```bash
+rustup toolchain install stable
+```
+
 To install project dependencies, run the following command:
 ```bash
-cargo build --path .
+cargo install --path .
+```
+
+To run the project, run the following command:
+```bash
+DATABASE_URL=postgres://root:postgres@localhost:5432?sslmode=disable \
+cargo run
 ```
 
 To run PostgreSQL using Docker Compose, run the following command:
